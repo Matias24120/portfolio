@@ -5,7 +5,7 @@ import projects from '../data/projects';
 
 const ProjectsView = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { isEnglish } = useLanguage();
 
   useEffect(() => {
@@ -34,16 +34,16 @@ const ProjectsView = () => {
       setSelectedProject(null);
     } else {
       setSelectedProject(index);
-      setCurrentSlide(0);
+      setCurrentImageIndex(0); 
     }
   };
 
   const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === projects[selectedProject].images.length - 1 ? 0 : prevSlide + 1));
+    setCurrentImageIndex(prevIndex => (prevIndex === projects[selectedProject].images.length - 1 ? 0 : prevIndex + 1));
   };
-
+  
   const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === 0 ? projects[selectedProject].images.length - 1 : prevSlide - 1));
+    setCurrentImageIndex(prevIndex => (prevIndex === 0 ? projects[selectedProject].images.length - 1 : prevIndex - 1));
   };
 
   const getIcons = (icons) => {
@@ -91,12 +91,16 @@ const ProjectsView = () => {
           {selectedProject === index && (
             <div className="accordion-content flex flex-col lg:flex-row">
               <div className='lg:w-1/2 relative'>
-                <div className="slider-container relative">
-                  <img src={project.images[currentSlide]} alt={project.title} className="p-4" />
-                  <div className="slider-nav">
-                    <button className="prev-slide" onClick={prevSlide}>&#10094;</button>
-                    <button className="next-slide" onClick={nextSlide}>&#10095;</button>
+                <div className="slider-container relative" style={{ width: '100%', overflow: 'hidden' }}>
+                  <div className="slider-inner" style={{ display: 'flex', transition: 'transform 0.5s ease', transform: `translateX(-${currentImageIndex * 100}%)` }}>
+                    {project.images.map((image, index) => (
+                      <img key={index} src={image} alt={project.title} className="p-4 w-full" />
+                    ))}
                   </div>
+                </div>
+                <div className="slider-nav">
+                  <button className="prev-slide" onClick={prevSlide}>&#10094;</button>
+                  <button className="next-slide" onClick={nextSlide}>&#10095;</button>
                 </div>
                 <div className="hidden lg:block absolute top-6 bottom-6 right-0 bg-white w-px"></div>
                 <div className="lg:hidden absolute bottom-0 right-5 left-5 bg-white h-px"></div>
