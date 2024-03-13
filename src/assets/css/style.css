@@ -56,11 +56,6 @@ p, span, a, button {
 
 /* NAVBAR */
 
-/* nav {
-  overflow: auto;
-	overflow-x: hidden;
-} */
-
 .logo:hover {
   filter: brightness(0.7); 
 }
