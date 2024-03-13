@@ -44,7 +44,7 @@ const Cursor = () => {
             };
 
             document.addEventListener('mousemove', mMove);
-            document.querySelectorAll('a, button, img, span').forEach(element => {
+            document.querySelectorAll('a, button, img, span, .accordion-bar').forEach(element => {
                 element.addEventListener('mouseover', handleMouseOver);
                 element.addEventListener('mouseout', handleMouseOut);
             });
@@ -54,7 +54,7 @@ const Cursor = () => {
 
             return () => {
                 document.removeEventListener('mousemove', mMove);
-                document.querySelectorAll('a, button, img, span').forEach(element => {
+                document.querySelectorAll('a, button, img, span, .accordion-bar').forEach(element => {
                     element.removeEventListener('mouseover', handleMouseOver);
                     element.removeEventListener('mouseout', handleMouseOut);
                 });
