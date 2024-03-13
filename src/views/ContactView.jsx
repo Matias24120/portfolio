@@ -33,7 +33,7 @@ const ContactView = () => {
       setEmailError(isEnglish ? 'Email is required' : 'Ingrese su correo');
       hasError = true;
     } else if (!validateEmail(email)) {
-      setEmailError(isEnglish ? 'Please enter a valid email address' : 'Por favor ingrese una dirección de correo electrónico válida');
+      setEmailError(isEnglish ? 'Please enter a valid email address' : 'Por favor, ingrese una dirección de correo electrónico válida');
       hasError = true;
     } else {
       setEmailError('');
