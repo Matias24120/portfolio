@@ -20,26 +20,33 @@ const ContactView = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    let hasError = false;
+
     if (name.trim() === '') {
       setNameError(isEnglish ? 'Name is required' : 'Ingrese su nombre');
-      return;
+      hasError = true;
     } else {
       setNameError('');
     }
 
     if (email.trim() === '') {
       setEmailError(isEnglish ? 'Email is required' : 'Ingrese su correo');
-      return;
+      hasError = true;
+    } else if (!validateEmail(email)) {
+      setEmailError(isEnglish ? 'Please enter a valid email address' : 'Por favor ingrese una dirección de correo electrónico válida');
+      hasError = true;
     } else {
       setEmailError('');
     }
 
     if (comment.trim() === '') {
       setCommentError(isEnglish ? 'Comment is required' : 'Ingrese su comentario');
-      return;
+      hasError = true;
     } else {
       setCommentError('');
     }
+
+    if (hasError) return;
 
     try {
       await addDoc(collection(db, "contact"), {
@@ -53,6 +60,11 @@ const ContactView = () => {
       setShowErrorModal(true);
       console.error('Error:', error);
     }
+  };
+
+  const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
   };
 
   useEffect(() => {
@@ -85,7 +97,7 @@ const ContactView = () => {
       <p className="text-md sm:text-xl text-gray-400 mt-2 flex items-center accordion">
         {isEnglish ? 'Send me a message!' : '¡Envíame un mensaje!'}
       </p>
-      <form className="mt-8 max-w-2xl mx-auto" onSubmit={handleSubmit}>
+      <form className="mt-8 max-w-2xl mx-auto" onSubmit={handleSubmit} noValidate>
         <div className="mb-4">
           <label htmlFor="name" className="block text-white text-md sm:text-lg font-bold mb-2 cursor-none contact">{isEnglish ? 'Name' : 'Nombre'}</label>
           <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} placeholder={isEnglish ? 'Enter your name' : 'Ingrese su nombre'} className="appearance-none bg-gray-200 border border-gray-200 rounded-lg w-full p-2 focus:outline-none focus:border-blue-500 cursor-none contact" style={{ borderWidth: '3px' }} />
