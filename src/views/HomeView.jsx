@@ -45,7 +45,7 @@ const HomeView = () => {
             <a href="https://github.com/Matias24120" target="_blank" rel="noopener noreferrer" className="mr-4 mt-2">
               <FaGithub size={26} />
             </a>
-            <a href="https://www.linkedin.com/in/mat%C3%ADas-montone-904532280/" target="_blank" rel="noopener noreferrer" className="mr-4 mt-2">
+            <a href="https://www.linkedin.com/in/matiasmontone/" target="_blank" rel="noopener noreferrer" className="mr-4 mt-2">
               <FaLinkedin size={26} />
             </a>
             <a href="mailto:matiasmontonedev@gmail.com" target="_blank" rel="noopener noreferrer" className="mt-2">
