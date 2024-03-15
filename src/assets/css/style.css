@@ -2,6 +2,12 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* AVOID OVERFLOW */
+
+html, body {
+  overflow-x: hidden;
+}
+
 /* CURSOR */
 
 @media (min-width: 1024px) {
