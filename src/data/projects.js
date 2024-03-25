@@ -109,8 +109,8 @@ const projects = [
       images: [Rocketpin1, Rocketpin2, Rocketpin3, Rocketpin4],
       title: "Rocketpin",
       "description": {
-        "en": "Model of administration panel with ABM from the Rocketpin company where you can view and edit the signatures obtained from clients and download them.",
-        "es": "Modelo de panel de administración con ABM de la empresa Rocketpin donde se pueden ver y editar las firmas obtenidas de clientes y descargarlas."
+        "en": "Model of administration panel with ABM from the Rocketpin company where you can view the signatures obtained from clients and download them.",
+        "es": "Modelo de panel de administración con ABM de la empresa Rocketpin donde se pueden ver las firmas obtenidas de clientes y descargarlas."
       },
       icons: ["FaHtml5", "FaJs", "FaVuejs"],
       website: '',
