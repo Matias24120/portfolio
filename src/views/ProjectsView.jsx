@@ -108,7 +108,7 @@ const ProjectsView = () => {
                   {project.tailwindIcon && <img src={project.tailwindIcon} alt="Tailwind Icon" style={{ objectFit: 'contain', marginLeft: '4px' }} className='tailwind-img' />}
                 </div>
                 <div className="flex items-end text-3xl sm:text-4xl">
-                  {index >= projects.length - 3 ? (
+                  {index >= projects.length - 4 ? (
                     <FaBan />
                   ) : (
                     <>
