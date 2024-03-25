@@ -19,6 +19,10 @@ import Music3    from '../assets/imgs/projects/music-shop/03-music-shop.png';
 import Music4    from '../assets/imgs/projects/music-shop/04-music-shop.png';
 import Starwars1 from '../assets/imgs/projects/starwars-api/01-starwars-api.png';
 import Starwars2 from '../assets/imgs/projects/starwars-api/02-starwars-api.png';
+import Rocketpin1    from '../assets/imgs/projects/rocketpin/01-rocketpin.png';
+import Rocketpin2    from '../assets/imgs/projects/rocketpin/02-rocketpin.png';
+import Rocketpin3    from '../assets/imgs/projects/rocketpin/03-rocketpin.png';
+import Rocketpin4    from '../assets/imgs/projects/rocketpin/04-rocketpin.png';
 import TailwindIcon from '../assets/imgs/tailwind-icon.png';
 
 const projects = [
@@ -100,6 +104,18 @@ const projects = [
       icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact", "FaBootstrap"],
       website: '',
       github: ''
+    },
+    {
+      images: [Rocketpin1, Rocketpin2, Rocketpin3, Rocketpin4],
+      title: "Rocketpin",
+      "description": {
+        "en": "Model of administration panel with ABM from the Rocketpin company where you can view and edit the signatures obtained from clients and download them.",
+        "es": "Modelo de panel de administración con ABM de la empresa Rocketpin donde se pueden ver y editar las firmas obtenidas de clientes y descargarlas."
+      },
+      icons: ["FaHtml5", "FaJs", "FaVuejs"],
+      website: '',
+      github: '',
+      tailwindIcon: TailwindIcon
     }
   ];
   
