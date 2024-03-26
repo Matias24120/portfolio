@@ -64,7 +64,7 @@ const Navbar = () => {
         <div className="flex flex-col items-start p-4 pt-0">
           <div className="flex justify-between items-center w-full">
             <p className='text-lg text-white p-4 pt-6 pb-6 pl-0'>{isEnglish ? ('Menu') : ('Menú')}</p>
-            <span className='text-white text-lg mt-1 cursor-pointer' onClick={toggleMenu}><FaTimes /></span>
+            <span className='text-white text-lg mt-1 cursor-pointer logo' onClick={toggleMenu}><FaTimes /></span>
           </div>
           <a href="# " className="nav-link text-lg text-white border-b border-white p-6 pl-0 w-full" onClick={toggleMenu}>
             <FaHome className="inline-block mr-2 mb-1.5" />{isEnglish ? ('Home') : ('Inicio')}
