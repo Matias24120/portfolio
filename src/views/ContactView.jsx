@@ -101,7 +101,7 @@ const ContactView = () => {
         <div className="mb-4">
           <label htmlFor="name" className="block text-white text-md sm:text-lg font-bold mb-2 cursor-none contact">{isEnglish ? 'Name' : 'Nombre'}</label>
           <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} placeholder={isEnglish ? 'Enter your name' : 'Ingrese su nombre'} className="appearance-none bg-gray-200 border border-gray-200 rounded-lg w-full p-2 focus:outline-none focus:border-blue-500 cursor-none contact" style={{ borderWidth: '3px' }} />
-          {nameError && <p className="text-red-500">{nameError}</p>}
+          {nameError && <p className="text-red-500 mt-2">{nameError}</p>}
         </div>
         <div className="mb-4">
           <label htmlFor="email" className="block text-white text-md sm:text-lg font-bold mb-2 cursor-none contact">{isEnglish ? 'Email' : 'Correo'}</label>
