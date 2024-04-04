@@ -106,12 +106,12 @@ const ContactView = () => {
         <div className="mb-4">
           <label htmlFor="email" className="block text-white text-md sm:text-lg font-bold mb-2 cursor-none contact">{isEnglish ? 'Email' : 'Correo'}</label>
           <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={isEnglish ? 'Enter your email' : 'Ingrese su correo'} className="appearance-none bg-gray-200 border border-gray-200 rounded-lg w-full p-2 focus:outline-none focus:border-blue-500 cursor-none contact" style={{ borderWidth: '3px' }} />
-          {emailError && <p className="text-red-500">{emailError}</p>}
+          {emailError && <p className="text-red-500 mt-2">{emailError}</p>}
         </div>
         <div className="mb-4">
           <label htmlFor="comment" className="block text-white text-md sm:text-lg font-bold mb-2 cursor-none contact">{isEnglish ? 'Comment' : 'Comentario'}</label>
           <textarea id="comment" name="comment" value={comment} onChange={(e) => setComment(e.target.value)} placeholder={isEnglish ? 'I wanted to contact you to...' : 'Quería contactarte para...'} className="appearance-none bg-gray-200 border border-gray-200 rounded-lg w-full p-6 pt-1 pl-2 focus:outline-none focus:border-blue-500 cursor-none contact" style={{ borderWidth: '3px' }}></textarea>
-          {commentError && <p className="text-red-500">{commentError}</p>}
+          {commentError && <p className="text-red-500 mt-2">{commentError}</p>}
         </div>
         <div className="flex items-center justify-end">
           <button type="submit" className="submit-hover border rounded-full text-white font-bold py-2 text-center inline-block w-28 contact">{isEnglish ? 'Submit' : 'Enviar'}</button>
