@@ -19,10 +19,14 @@ import Music3    from '../assets/imgs/projects/music-shop/03-music-shop.png';
 import Music4    from '../assets/imgs/projects/music-shop/04-music-shop.png';
 import Starwars1 from '../assets/imgs/projects/starwars-api/01-starwars-api.png';
 import Starwars2 from '../assets/imgs/projects/starwars-api/02-starwars-api.png';
-import Rocketpin1    from '../assets/imgs/projects/rocketpin/01-rocketpin.png';
-import Rocketpin2    from '../assets/imgs/projects/rocketpin/02-rocketpin.png';
-import Rocketpin3    from '../assets/imgs/projects/rocketpin/03-rocketpin.png';
-import Rocketpin4    from '../assets/imgs/projects/rocketpin/04-rocketpin.png';
+import Fxw1      from '../assets/imgs/projects/fxw/01-fxw.png';
+import Fxw2      from '../assets/imgs/projects/fxw/02-fxw.png';
+import Fxw3      from '../assets/imgs/projects/fxw/03-fxw.png';
+import Fxw4      from '../assets/imgs/projects/fxw/04-fxw.png';
+import Cutler1   from '../assets/imgs/projects/cutler/01-cutler.png';
+import Cutler2   from '../assets/imgs/projects/cutler/02-cutler.png';
+import Cutler3   from '../assets/imgs/projects/cutler/03-cutler.png';
+import Cutler4   from '../assets/imgs/projects/cutler/04-cutler.png';
 import TailwindIcon from '../assets/imgs/tailwind-icon.png';
 
 const projects = [
@@ -106,13 +110,25 @@ const projects = [
       github: ''
     },
     {
-      images: [Rocketpin1, Rocketpin2, Rocketpin3, Rocketpin4],
-      title: "Rocketpin",
+      images: [Fxw1, Fxw2, Fxw3, Fxw4],
+      title: "FxW",
       "description": {
-        "en": "Model of administration panel with ABM from the Rocketpin company where you can view and download the signatures obtained from clients.",
-        "es": "Modelo de panel de administración con ABM de la empresa Rocketpin donde se pueden ver y descargar las firmas obtenidas de clientes."
+        "en": "Front-end design for the FxW company in which you can view, add and download client signatures. There are also contact and help sections.",
+        "es": "Diseño Front-end para la empresa FxW en el cual se puede ver, agregar y descargar firmas de clientes. También hay secciones de contacto y ayuda."
       },
       icons: ["FaHtml5", "FaJs", "FaVuejs"],
+      website: '',
+      github: '',
+      tailwindIcon: TailwindIcon
+    },
+    {
+      images: [Cutler1, Cutler2, Cutler3, Cutler4],
+      title: "Cutler",
+      "description": {
+        "en": "Website for sales of training articles and supplements. It includes sections for home, registration, shopping cart, products, seller administration panel, among others.",
+        "es": "Sitio de ventas de artículos de entrenamiento y suplementos. Incluye secciones de inicio, registro, carrito de compras, productos, panel de administración para el vendedor, entre otros."
+      },
+      icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact"],
       website: '',
       github: '',
       tailwindIcon: TailwindIcon
