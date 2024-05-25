@@ -1,3 +1,7 @@
+import Fxw1      from '../assets/imgs/projects/fxw/01-fxw.png';
+import Fxw2      from '../assets/imgs/projects/fxw/02-fxw.png';
+import Fxw3      from '../assets/imgs/projects/fxw/03-fxw.png';
+import Fxw4      from '../assets/imgs/projects/fxw/04-fxw.png';
 import Five1     from '../assets/imgs/projects/five-stars/01-five-stars.png';
 import Five2     from '../assets/imgs/projects/five-stars/02-five-stars.png';
 import Five3     from '../assets/imgs/projects/five-stars/03-five-stars.png';
@@ -19,10 +23,6 @@ import Music3    from '../assets/imgs/projects/music-shop/03-music-shop.png';
 import Music4    from '../assets/imgs/projects/music-shop/04-music-shop.png';
 import Starwars1 from '../assets/imgs/projects/starwars-api/01-starwars-api.png';
 import Starwars2 from '../assets/imgs/projects/starwars-api/02-starwars-api.png';
-import Fxw1      from '../assets/imgs/projects/fxw/01-fxw.png';
-import Fxw2      from '../assets/imgs/projects/fxw/02-fxw.png';
-import Fxw3      from '../assets/imgs/projects/fxw/03-fxw.png';
-import Fxw4      from '../assets/imgs/projects/fxw/04-fxw.png';
 import Cutler1   from '../assets/imgs/projects/cutler/01-cutler.png';
 import Cutler2   from '../assets/imgs/projects/cutler/02-cutler.png';
 import Cutler3   from '../assets/imgs/projects/cutler/03-cutler.png';
@@ -30,6 +30,18 @@ import Cutler4   from '../assets/imgs/projects/cutler/04-cutler.png';
 import TailwindIcon from '../assets/imgs/tailwind-icon.png';
 
 const projects = [
+    {
+      images: [Fxw1, Fxw2, Fxw3, Fxw4],
+      title: "FxW",
+      "description": {
+      "en": "Front-end design for the FxW company in which you can create a document, view it in requests, sign it, view your profile, buy plans, register through Google, among others.",
+      "es": "Diseño Front-end para la empresa FxW en el cual se puede crear un documento, visualizarlo en solicitudes, firmarlo, ver tu perfil, comprar planes, registrarse mediante google, entre otros."
+      },
+      icons: ["FaHtml5", "FaJs", "FaVuejs"],
+      website: 'https://fx-w.vercel.app/',
+      github: 'https://github.com/matiasmontonee/FxW',
+      tailwindIcon: TailwindIcon
+    },
     {
       images: [Five1, Five2, Five3, Five4],
       title: "Five Stars",
@@ -39,7 +51,7 @@ const projects = [
       },
       icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact", "FaBootstrap",],
       website: 'https://five-stars-api.vercel.app',
-      github: 'https://github.com/Matias24120/movieapi'
+      github: 'https://github.com/matiasmontonee/movieapi'
     },
     {
       images: [Feather1, Feather2, Feather3, Feather4],
@@ -50,7 +62,7 @@ const projects = [
       },
       icons: ["FaHtml5", "FaCss3", "FaJs"],
       website: 'https://feather-store.vercel.app',
-      github: 'https://github.com/Matias24120/feather'
+      github: 'https://github.com/matiasmontonee/feather'
     },
     {
       images: [Todo1, Todo2],
@@ -61,7 +73,7 @@ const projects = [
       },
       icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact"],
       website: 'https://to-do-app-website.vercel.app',
-      github: 'https://github.com/Matias24120/to-do-app',
+      github: 'https://github.com/matiasmontonee/to-do-app',
       tailwindIcon: TailwindIcon 
     },
     {
@@ -73,7 +85,7 @@ const projects = [
       },
       icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact"],
       website: 'https://pokeapi-website.vercel.app',
-      github: 'https://github.com/Matias24120/pokeapi',
+      github: 'https://github.com/matiasmontonee/pokeapi',
       tailwindIcon: TailwindIcon 
     },
     {
@@ -110,18 +122,6 @@ const projects = [
       github: ''
     },
     {
-      images: [Fxw1, Fxw2, Fxw3, Fxw4],
-      title: "FxW",
-      "description": {
-        "en": "Front-end design for the FxW company in which you can view, add and download client signatures. There are also contact and help sections.",
-        "es": "Diseño Front-end para la empresa FxW en el cual se puede ver, agregar y descargar firmas de clientes. También hay secciones de contacto y ayuda."
-      },
-      icons: ["FaHtml5", "FaJs", "FaVuejs"],
-      website: '',
-      github: '',
-      tailwindIcon: TailwindIcon
-    },
-    {
       images: [Cutler1, Cutler2, Cutler3, Cutler4],
       title: "Cutler",
       "description": {
@@ -135,4 +135,4 @@ const projects = [
     }
   ];
   
-export default projects;
+export default projects;  
