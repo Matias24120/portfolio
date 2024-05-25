@@ -42,7 +42,7 @@ const HomeView = () => {
               {isEnglish ? 'About me' : 'Sobre mí'}
               <FaArrowUp size={26} className="arrow-animation" />
             </a>
-            <a href="https://github.com/Matias24120" target="_blank" rel="noopener noreferrer" className="mr-4 mt-2">
+            <a href="https://github.com/matiasmontonee" target="_blank" rel="noopener noreferrer" className="mr-4 mt-2">
               <FaGithub size={26} />
             </a>
             <a href="https://www.linkedin.com/in/matiasmontone/" target="_blank" rel="noopener noreferrer" className="mr-4 mt-2">
