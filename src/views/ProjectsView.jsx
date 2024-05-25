@@ -77,10 +77,7 @@ const ProjectsView = () => {
 
       {projects.map((project, index) => (
         <div key={index} className="accordion mt-8">
-          <div
-            className={`accordion-bar p-4 sm:p-8 ${selectedProject === index ? 'active' : ''}`}
-            onClick={() => toggleAccordion(index)}
-          >
+          <div className={`accordion-bar p-4 sm:p-8 ${selectedProject === index ? 'active' : ''}`} onClick={() => toggleAccordion(index)}>
             <h3 className="accordion-title text-xl sm:text-3xl text-white">{project.title}</h3>
             <div className="accordion-arrow text-blue-500 text-2xl sm:text-3xl">{selectedProject === index ? <FaArrowUp /> : <FaArrowDown />}</div>
           </div>
@@ -108,7 +105,7 @@ const ProjectsView = () => {
                   {project.tailwindIcon && <img src={project.tailwindIcon} alt="Tailwind Icon" style={{ objectFit: 'contain', marginLeft: '4px' }} className='tailwind-img' />}
                 </div>
                 <div className="flex items-end text-3xl sm:text-4xl">
-                  {index >= projects.length - 5 ? (
+                  {index >= projects.length - 4 ? (
                     <FaBan />
                   ) : (
                     <>
@@ -120,7 +117,7 @@ const ProjectsView = () => {
               </div>
             </div>
           </div>
-          {index === 3 && (
+          {index === 4 && (
             <div className="accordion mt-8">
               <p className="text-lg sm:text-2xl text-gray-400 flex items-center">
                 {isEnglish ? 'Upcoming projects' : 'Próximos proyectos'}<FaTools className="ml-3 text-blue-500" />
